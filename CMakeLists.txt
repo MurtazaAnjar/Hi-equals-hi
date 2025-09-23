@@ -15,7 +15,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-add_executable(hello_test tests/hello_test.cpp src/hello.cpp)
-add_executable(main main.cpp src/hello.cpp)
+add_executable(strcmp_test tests/strcmp_test.cpp src/strcmp.cpp)
+add_executable(main main.cpp src/strcmp.cpp)
 
-target_link_libraries(hello_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(strcmp_test PRIVATE Catch2::Catch2WithMain)
