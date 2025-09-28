@@ -1,16 +1,39 @@
-#include <iostream>
 #include "src/strcmp.hpp"
+#include <iostream>
+
 
 
 int main() {
   std::cout<<hello()<<std::endl;
-  std::cout<<tolower('A')<<std::endl;
-  std::cout<< strcmp("String one","String one") << std::endl;
-  std::cout<< strcmp("String one","String two") << std::endl;
-  std::cout<< strcmp("String two","String one") << std::endl;
-  std::cout<< strcmp_case_insensitive("String one","string one") << std::endl;
-  std::cout<< strcmp_case_insensitive("String one","string two") << std::endl;
-  std::cout<< strcmp_case_insensitive("String two","string one") << std::endl;
+  std::string str1 = "", str2 = "";
+  bool spc = false;
+  bool maxFlag = false;
+  int max = -1;
+
+  std::cout<<"Input the first string:"<<std::endl;
+  std::getline(std::cin, str1);
+  //std::cin.ignore(INT_MAX,'\n');
+
+  std::cout<<"Input the second string"<<std::endl;
+  std::getline(std::cin, str2);
+  //std::cin.ignore(INT_MAX,'\n');
+
+  std::cout<<"Do you want to skip spaces? (1/0)"<<std::endl;
+  std::cin>>spc;
+  std::cin.ignore(INT_MAX,'\n');
+
+  std::cout<<"Do you want to cap comparison length? (1/0)"<<std::endl;
+  std::cin>>maxFlag;
+  std::cin.ignore(INT_MAX,'\n');
+
+  if (maxFlag) {
+    std::cout<<"Input the number of characters for comparison:"<<std::endl;
+    std::cin>>max;
+    std::cin.ignore(INT_MAX,'\n');
+  }
+
+  std::cout<<str1<<str2<<spc<<max<<std::endl;
+  std::cout<<strcmp_case_insensitive(str1, str2, spc, max)<<std::endl;
 
   return 0;
 }
