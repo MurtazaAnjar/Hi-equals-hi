@@ -44,7 +44,7 @@ int main() {
     std::cin.ignore(INT_MAX,'\n');
   }
 
-  std::cout<<str1<<str2<<spc<<max<<std::endl;
+  //std::cout<<str1<<str2<<spc<<max<<std::endl;
   std::cout<<strcmp_case_insensitive(str1, str2, spc, max)<<std::endl;
 
   return 0;
