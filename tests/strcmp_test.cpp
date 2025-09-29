@@ -15,7 +15,7 @@ TEST_CASE( "strcmp and strcmp_case_insensitive works for all parameters" ) {
     REQUIRE( strcmp_case_insensitive("String two","string one") == 1);
 
     REQUIRE( strcmp_case_insensitive("my cool string","mycoolstring", true) == 0);
-    REQUIRE( strcmp_case_insensitive("My Cool String","MyCoolString", true) == 0);
+    REQUIRE( strcmp_case_insensitive("My Cool  String","MyCoolString", true) == 0);
     REQUIRE( strcmp_case_insensitive("My Cool String","mycoolstring", true) == 0);
     REQUIRE( strcmp_case_insensitive("My Cool String ","mycoolstring", true) == 0);
     REQUIRE( strcmp_case_insensitive(" My Cool String","mycoolstring", true) == 0);
