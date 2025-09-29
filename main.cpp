@@ -5,6 +5,18 @@
 
 int main() {
   std::cout<<hello()<<std::endl;
+
+  //testing some cases -- detailed testing in test file
+  std::cout<<strcmp_case_insensitive("Hello World", "hello world")<<std::endl;
+  std::cout<<strcmp_case_insensitive("Hello World", "hello wor ld", true)<<std::endl;
+  std::cout<<strcmp_case_insensitive("Hello World", "helli wor ld", true, 3)<<std::endl;
+  std::cout<<strcmp_case_insensitive("", "")<<std::endl;
+  std::cout<<strcmp_case_insensitive("20 Hello World", "1 helli wor ld", true, 3)<<std::endl;
+  std::cout<<strcmp_case_insensitive(" Hello World", "helli wor ld", false, 3)<<std::endl;
+
+  std::cout<<"\n\n"<<std::endl;
+
+  //user prompting program
   std::string str1 = "", str2 = "";
   bool spc = false;
   bool maxFlag = false;

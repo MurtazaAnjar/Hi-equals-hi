@@ -5,7 +5,7 @@
 
 #include "../src/strcmp.hpp"
 
-TEST_CASE( "it works" ) {
+TEST_CASE( "strcmp and strcmp_case_insensitive works for all parameters" ) {
     REQUIRE( strcmp("String one","String one") == 0);
     REQUIRE( strcmp("String one","String two") == -1);
     REQUIRE( strcmp("String two","String one") == 1);
